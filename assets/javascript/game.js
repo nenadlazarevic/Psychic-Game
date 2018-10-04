@@ -28,9 +28,17 @@ document.onkeyup = function(event) {
         
          if (userGuess === computerGuess) {
         wins++;
-        numGuesses = 9;
+        // numGuesses = 9;
         userselected = [];
-      }  else if (userGuess !== computerGuess) {
+         }
+        if (event.keyCode < 65 || event.keyCode > 90) {
+          alert("Invalid Entry");
+
+         
+        } else if (userselected.indexOf(userGuess) >=0) {
+          alert("You already guessed that!");
+        
+      } else if (userGuess !== computerGuess) {
        numGuesses--;
        userselected.push(userGuess);
       } 
