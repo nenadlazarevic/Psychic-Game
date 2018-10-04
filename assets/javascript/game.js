@@ -11,11 +11,11 @@ var numGuesses = 9;
 
     var directionsText = document.getElementById("directions-text");
     var userChoiceText = document.getElementById("userchoice-text");
-    var computerChoiceText = document.getElementById("computerchoice-text");
+    // var computerChoiceText = document.getElementById("computerchoice-text");
     var winsText = document.getElementById("wins-text");
     var lossesText = document.getElementById("losses-text");
     var numGuessesText = document.getElementById("numGuesses-text");
-    var userselectedtext = document.getElementById("UserSelected-text");
+    // var userselectedtext = document.getElementById("UserSelected-text");
    
 
 document.onkeyup = function(event) {
@@ -28,7 +28,7 @@ document.onkeyup = function(event) {
         
          if (userGuess === computerGuess) {
         wins++;
-        // numGuesses = 9;
+        numGuesses = 9;
         userselected = [];
          }
         if (event.keyCode < 65 || event.keyCode > 90) {
@@ -65,12 +65,12 @@ document.onkeyup = function(event) {
 
 
     // Display the user and computer guesses, and wins/losses/ties.
-    userChoiceText.textContent = "You chose: " + userGuess;
-    computerChoiceText.textContent = "The computer chose: " + computerGuess;
+    userChoiceText.textContent = "You chose: " + userselected;
+    // computerChoiceText.textContent = "The computer chose: " + computerGuess;
     winsText.textContent = "wins: " + wins;
     lossesText.textContent = "losses: " + losses;
     numGuessesText.textContent = "guesses left: " + numGuesses;
-    userselectedtext.textContent = "you selected: " + userselected;
+    
     
   };
 
