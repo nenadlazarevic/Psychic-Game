@@ -10,13 +10,12 @@ var numGuesses = 9;
 
 
 
-    var directionsText = document.getElementById("directions-text");
+   
     var userChoiceText = document.getElementById("userchoice-text");
-    var computerChoiceText = document.getElementById("computerchoice-text");
     var winsText = document.getElementById("wins-text");
     var lossesText = document.getElementById("losses-text");
     var numGuessesText = document.getElementById("numGuesses-text");
-    var userselectedtext = document.getElementById("UserSelected-text");
+  
 
     var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
    
@@ -26,7 +25,8 @@ document.onkeyup = function(event) {
   var userGuess = event.key;
   
       
-
+      
+    
 
      {
         
@@ -67,7 +67,7 @@ document.onkeyup = function(event) {
 
    
     
- directionsText.textContent = "";
+ 
    
      userChoiceText.textContent = "You chose: " + userselected;
     winsText.textContent = "wins: " + wins;
